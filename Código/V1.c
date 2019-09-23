@@ -9,7 +9,7 @@
 
 //Constantes
 #define QTD_VAGAS           3   // Quantidade de vagas do sistema
-#define MAX_DISTANCIA       30  // Valor da maxima distancia em centrimetro do carro na saida
+#define MAX_DISTANCIA       7  // Valor da maxima distancia em centrimetro do carro na saida
 
 //Pinos do sensor ultrasonico
 #define PIN_ECHO            5   // Pino Echo responsavel por receber o som do sensor ultrasonico 
