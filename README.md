@@ -4,7 +4,7 @@ Desenvolvimento de um estacionamento inteligente com arduíno nano, baseado em c
 
 # Funcionamento do Sistema 
   
-  A programação do arduino para realizar as tarefas necessárias execulta as seguintes funções:
+  A programação do arduino para realizar as tarefas necessárias que torna um estacionamento inteligente, execulta as seguintes funções:
    + VerificarVagas();
    + VerificarSaida();
    + VerificarEntrada();
