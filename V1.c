@@ -51,7 +51,6 @@ int vagas_Liv = 0;                  // Quantidade de vagas livres
 int posi_VagaLiv = 0;               // Posição da vaga livre
 int movi_Servo_Sai = 180;           // Movimento do Servo da saida- Graus 
 int movi_Servo_Ent = 0;             // Movimento do Servo da entrada - Graus 
-unsigned long tempo;                // Armazena a duração do pulso do som sem sinais 
 double distancia;                   // Armazenara a distancia do objeto (carro)
 
 String autorizado = " 1e 4d 43 4b"; // UID do motorista autorizado a passar
@@ -69,9 +68,6 @@ void setup()
     servo_Sai.attach(PIN_SERVO_SAIDA);  // Associar o servo de saida ao pino
     servo_Sai.write(movi_Servo_Sai);    // iniciando a posição do servo da saida;
     
-    mfrc522.PCD_DumpVersionToSerial();  // Mostrando detalhes do MFRCC522
-    Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));
-
 
     for (int i = 0; i < QTD_VAGAS; i++) // Definindo os pinos dos leds como de Saida 
     {
@@ -135,9 +131,7 @@ void VerificarVagas(){
     for (int i = 0; i < QTD_VAGAS; i++)         // Lendo os valores dos sensores
     {
         situ_Vaga = analogRead(senVags[i]);     // Valores de 0 a 1023
-        Serial.println("Vaga ");
-        Serial.println(i);
-        Serial.println(situ_Vaga);
+
         if(situ_Vaga <= 3){                     // Menor valor = pouca luz = vaga ocupada = LED apagado
             digitalWrite(ledsLivVaga[i], LOW);
         }else{                                  // Maiores valores = maior nível de luz = vaga livre = LED ligado
