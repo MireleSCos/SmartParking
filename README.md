@@ -16,7 +16,7 @@ Desenvolvimento de um estacionamento inteligente com arduíno nano, baseado em c
 
   ### Esquematização do Circuito 
 
-   <img src="imagens/Esquema.png">
+   <img src="Imagens/Esquema.png">
    
 
   
